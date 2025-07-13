@@ -1,0 +1,13 @@
+version: 1
+services:
+  - type: web
+    name: ngx-paperless
+    env: docker
+    docker:
+      dockerfilePath: ./Dockerfile
+    plan: free
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: ENV_VAR_NAME
+        value: your_value
